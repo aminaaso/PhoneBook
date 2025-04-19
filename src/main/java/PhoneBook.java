@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class PhoneBook {
     List<Contact> contactList = new ArrayList<>();
 
-
     public void addContact() {
         Scanner scannerObj = new Scanner(System.in);
         System.out.println("Please enter your name:");
@@ -30,8 +29,7 @@ public class PhoneBook {
     }
 
     public void printContacts() {
-        for (int i = 0; i < contactList.size(); i++) {
-            Contact contact = contactList.get(i);
+        for (Contact contact : contactList) { //enhanced for loop
             System.out.println("Name=[" + contact.name + "] Number=[" + contact.number + "]");
         }
     }
